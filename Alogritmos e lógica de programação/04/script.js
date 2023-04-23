@@ -25,10 +25,10 @@ function media() {
 }
 
 if(media() >= 15) {
-    alert(`Parabéns ${name}! Você foi aprovado! Sua média é ${media()}`)
+    alert(`Parabéns ${name}! Você foi aprovado! Sua média é ${result}`)
 } else if(media() >= 10) {
-    alert(`Recuperação! ${name}, sua média é ${media()}`)
+    alert(`Recuperação! ${name}, sua média é ${result}`)
 } else {
-    alert(`Reprovado! ${name}, sua média é ${media()}`)
+    alert(`Reprovado! ${name}, sua média é ${result}`)
 }
 
