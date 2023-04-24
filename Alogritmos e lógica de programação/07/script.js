@@ -21,7 +21,6 @@
 let menu
 
 let items = []
-let lista = items
 
 while (menu != 3) {
     menu = prompt(
