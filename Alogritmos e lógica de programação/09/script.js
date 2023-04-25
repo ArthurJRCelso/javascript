@@ -36,10 +36,14 @@ const patients = [
     },
 ]
 
-const printPatientIMC = function (patient) {
+function IMC(weight, height) {
+    return (weight / ((height / 100) ** 2)).toFixed(2)
+}
+
+function printPatientIMC(patient) {
     return `
     Paciente ${patient.name} possui o IMC de 
-    ${(patient.weight / ((patient.height / 100) ** 2)).toFixed(2)}`
+    ${IMC(patient.weight, patient.height)}`
 }
 
 for (let patient of patients) {
