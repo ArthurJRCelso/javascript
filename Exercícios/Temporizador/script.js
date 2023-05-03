@@ -11,11 +11,25 @@ let minutes
 function countdown() {
     setTimeout(function() {
         let seconds = Number(secondsDisplay.textContent)
+        let minutes = Number(minutesDisplay.textContent)
+
+        secondsDisplay.textContent = String(seconds - 1).padStart(2, '0')
+
+        if (minutes <= 0) {
+            buttonPlay.classList.remove('hide')
+            buttonPause.classList.add('hide')
+            buttonSet.classList.remove('hide')
+            buttonStop.classList.add('hide')
+            return
+        }
         
         if (seconds <= 0) {
-            seconds = 60
+            seconds = 2
+
+            minutesDisplay.textContent = String(minutes -1).padStart(2, '0')
         }
-        secondsDisplay.textContent = seconds - 1
+
+        secondsDisplay.textContent = String(seconds - 1).padStart(2, '0')
 
         countdown()
     }, 1000)
@@ -54,5 +68,5 @@ buttonSoundOff.addEventListener('click', function() {
 
 buttonSet.addEventListener('click', function() {
     minutes = prompt('Quantos minutos?')
-    minutesDisplay.textContent = minutes
+    minutesDisplay.textContent = String(minutes).padStart(2, '0')
 })
