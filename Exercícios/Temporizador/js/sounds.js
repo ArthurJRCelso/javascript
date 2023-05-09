@@ -13,8 +13,8 @@ export default function() {
     }
 
     return {
-        buttonPressAudio,
-        kitchenTimer,
+        pressButton,
+        timeEnd,
         bgAudio
     }
 }

@@ -31,7 +31,7 @@ export default function Timer({
         if (minutes <= 0 && seconds <= 0) {
             resetControls()
             updateDisplay()
-            Sounds().kitchenTimer
+            Sounds().timeEnd()
             return
         }
         

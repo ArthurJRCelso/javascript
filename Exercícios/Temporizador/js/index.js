@@ -29,7 +29,7 @@ const sound = Sound()
 buttonPlay.addEventListener('click', function() {
     controls.play()
     timer.countdown()
-    sound.buttonPressAudio()
+    sound.pressButton()
 }) 
 
 buttonPause.addEventListener('click', function() {
@@ -47,11 +47,13 @@ buttonStop.addEventListener('click', function() {
 buttonSoundOn.addEventListener('click', function() {
     buttonSoundOn.classList.add('hide')
     buttonSoundOff.classList.remove('hide')
+    sound.bgAudio.play()
 })
 
 buttonSoundOff.addEventListener('click', function() {
     buttonSoundOff.classList.add('hide')
     buttonSoundOn.classList.remove('hide')
+    sound.bgAudio.pause()
 })
 
 buttonSet.addEventListener('click', function() {
