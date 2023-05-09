@@ -1,3 +1,5 @@
+import Sounds from "./sounds.js"
+
 export default function Timer({
     minutesDisplay,
     secondsDisplay,
@@ -15,8 +17,8 @@ export default function Timer({
     }
 
     function reset() {
-    updateDisplay(minutes, 0)
-    clearTimeout(timerTimeOut)
+        updateDisplay(minutes, 0)
+        clearTimeout(timerTimeOut)
     }
 
     function countdown() {
@@ -29,6 +31,7 @@ export default function Timer({
         if (minutes <= 0 && seconds <= 0) {
             resetControls()
             updateDisplay()
+            Sounds().kitchenTimer
             return
         }
         

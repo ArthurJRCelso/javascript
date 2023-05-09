@@ -1,14 +1,15 @@
 import Controls from "./controls.js"
 import Timer from "./timer.js"
-
-const buttonPlay = document.querySelector('.play')
-const buttonPause = document.querySelector('.pause')
-const buttonStop = document.querySelector('.stop')
-const buttonSet = document.querySelector('.set')
-const buttonSoundOn = document.querySelector('.sound-on')
-const buttonSoundOff = document.querySelector('.sound-off')
-let minutesDisplay = document.querySelector('.minutes')
-let secondsDisplay = document.querySelector('.seconds')
+import Sound from "./sounds.js"
+import {  
+    buttonPause,
+    buttonPlay,
+    buttonSet,
+    buttonSoundOff,
+    buttonSoundOn,
+    buttonStop,
+    minutesDisplay,
+    secondsDisplay } from "./elements.js"
 
 const controls = Controls({
     buttonPause,
@@ -23,20 +24,24 @@ const timer = Timer({
     resetControls: controls.reset,
 })
 
+const sound = Sound()
 
 buttonPlay.addEventListener('click', function() {
     controls.play()
     timer.countdown()
+    sound.buttonPressAudio()
 }) 
 
 buttonPause.addEventListener('click', function() {
     controls.pause()
     timer.hold()
+    sound.buttonPressAudio()
 })
 
 buttonStop.addEventListener('click', function() {
     timer.reset()
     controls.reset()
+    sound.buttonPressAudio()
 })
 
 buttonSoundOn.addEventListener('click', function() {
