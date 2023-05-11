@@ -12,6 +12,7 @@ body {
     display: flex;
     height: 100vh;
     font-size: 12.7rem;
+    padding: 3rem;
 }
 
 main {
@@ -19,6 +20,7 @@ main {
     gap: 19.2rem;
     align-items: center;
     margin: auto;
+
 }
 
 .displayOne {
@@ -30,6 +32,15 @@ main {
 
 .timer {
     margin-bottom: 1.7rem;
+    display: flex;
+}
+
+.controls1 {
+    display: flex;
+}
+
+.controls1 button {
+    background: none;
 }
 
 .controls2 {
@@ -54,4 +65,5 @@ main {
     width: 13.8rem;
     height: 15.2rem;
 }
+
 
