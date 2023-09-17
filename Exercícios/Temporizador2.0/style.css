@@ -15,6 +15,10 @@ body {
     padding: 3rem;
 }
 
+.hide {
+    display: none;
+}
+
 main {
     display: flex;
     gap: 19.2rem;
@@ -28,6 +32,8 @@ main {
     align-items: center;
     justify-content: center;
     margin: auto;
+    font-family: 'Roboto', sans-serif;
+    color: #323238;
 }
 
 .timer {
@@ -43,6 +49,7 @@ button {
     display: flex;
 }
 
+
 .controls1 button {
     background: none;
 }
@@ -53,6 +60,11 @@ button {
     "A B"
     "C D";
     gap: 3.2rem;
+}
+
+.forest:hover, .rain:hover, .coffee:hover, .fireplace:hover {
+    background-color: #02799D;
+    transition: .2s;
 }
 
 .displayOne button {
@@ -87,6 +99,10 @@ button {
         display: flex;
         flex-direction: column;
         gap: 5rem;
+    }
+
+    .timer {
+        margin-bottom: 4rem;
     }
 
     .controls2 {
